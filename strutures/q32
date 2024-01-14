@@ -1,0 +1,62 @@
+// Define a structure "Book" having members-bookId,title,price. Use typedef to name this structure "BOOK". Accept the data for a book and display tha record.
+
+#include<iostream>
+#include<cstudio>
+
+using namespace std;
+
+struct Book{
+    int bookId;
+    char title[20];
+    int price;
+    public:
+    void input(){
+        cout<<"Enter bookID: \t"
+        cin>>bookId;
+        cout<<"Enter title : ";
+        cin.getline(title,20);
+        cout<<"Enter its price: ";
+        cin>>price;
+    }
+    void display(){
+        cout<<"Info of the Book: ";
+        cout<<bookId<<endl;
+        cout<<title<<endl;
+        cout<<Price<<endl;
+    }
+    int getId(){
+        return bookId;
+    }
+
+};
+
+int main(){
+    struct Book b[20];
+    int choice , cnt=0,i,bookID;
+    while(true){
+        cout<<"1. Insert Record "<<endl;
+         cout<<"2. Update Record(based on id) "<<endl;
+          cout<<"3.Display all records "<<endl;
+          cout<<"4. Exit "
+          cin>>choice;
+          switch(choice)
+          {
+            case 1: b[cnt+++].input();
+                break;
+            case 2:
+            cout<<"Enter id of book to be updated"<<endl;
+            cin>>bookID;
+            for(i=0;i<cnt;i++){
+                if(id==b[i].getId()){
+                    b[i].Update();
+                }
+            }
+            case 3:
+                for(int i=0;i<cnt;i++){
+                    
+                }
+            case 4:
+                exit(0);
+          }
+    }
+}
